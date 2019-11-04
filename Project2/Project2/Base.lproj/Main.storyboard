@@ -15,26 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoC-F0-BXj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoC-F0-BXj">
                                 <rect key="frame" x="121" y="128" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-Qb-eJj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-Qb-eJj">
                                 <rect key="frame" x="121" y="259" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uai-hZ-uQn">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uai-hZ-uQn">
                                 <rect key="frame" x="121" y="383" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="us"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NZx-Qb-eJj" firstAttribute="top" secondItem="ZoC-F0-BXj" secondAttribute="bottom" constant="31" id="2Tl-XI-X4p"/>
+                            <constraint firstItem="Uai-hZ-uQn" firstAttribute="top" secondItem="NZx-Qb-eJj" secondAttribute="bottom" constant="24" id="7sw-9i-Vk7"/>
+                            <constraint firstItem="ZoC-F0-BXj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ICj-8q-dFq"/>
+                            <constraint firstItem="ZoC-F0-BXj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ja0-Yn-SVp"/>
+                            <constraint firstItem="Uai-hZ-uQn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pCb-q2-Ogk"/>
+                            <constraint firstItem="NZx-Qb-eJj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zts-R0-2sp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="B5T-Yp-qRt"/>
+                    <connections>
+                        <outlet property="button1" destination="ZoC-F0-BXj" id="JVv-gh-Qbs"/>
+                        <outlet property="button2" destination="NZx-Qb-eJj" id="1ZH-3h-ffX"/>
+                        <outlet property="button3" destination="Uai-hZ-uQn" id="sVX-DB-Fba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,4 +69,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>
