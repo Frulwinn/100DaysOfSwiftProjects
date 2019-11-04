@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //properties
     var countries = [String]()
     var score = 0
+    var correctAnswer = 0
     
     
     //outlets
@@ -40,6 +41,8 @@ class ViewController: UIViewController {
     }
 
     func askQuestion() {
+        
+        countries.shuffle()
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
