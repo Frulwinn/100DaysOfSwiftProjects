@@ -21,6 +21,11 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     
+    @IBAction func buttonTapped(_ sender: Any) {
+        
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,5 +56,7 @@ class ViewController: UIViewController {
         title = countries[correctAnswer].uppercased()
 
     }
+    
+    
 }
 
