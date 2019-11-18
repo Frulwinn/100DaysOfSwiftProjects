@@ -28,6 +28,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: "https://www.apple.com")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+        
+        toolbarItems = [spacer, refresh]
+        navigationController?.isToolbarHidden = false
     }
     
     @objc func openTapped() {
