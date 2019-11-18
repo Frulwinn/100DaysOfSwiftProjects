@@ -13,6 +13,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     //properties
     var webView: WKWebView!
+    var progressView: UIProgressView!
     
     override func loadView() {
         webView = WKWebView()
