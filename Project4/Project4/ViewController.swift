@@ -44,6 +44,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
+        }
+    }
+    
     @objc func openTapped() {
         let ac = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "apple.com", style: .default, handler: openPage))
@@ -57,6 +63,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: "https://" + action.title!)!
         webView.load(URLRequest(url: url))
     }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title
     }
