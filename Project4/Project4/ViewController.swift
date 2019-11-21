@@ -30,6 +30,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         let progressButton = UIBarButtonItem(customView: progressView)
@@ -39,6 +41,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         toolbarItems = [progressButton, spacer, refresh]
         navigationController?.isToolbarHidden = false
+        
     }
     
     @objc func openTapped() {
